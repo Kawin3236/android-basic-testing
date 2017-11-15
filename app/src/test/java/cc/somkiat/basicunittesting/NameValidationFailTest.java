@@ -16,5 +16,18 @@ public class NameValidationFailTest {
         assertFalse("ต้องไม่ผ่านนะ เพราะว่ามั้นมีค่าว่าง", result);
     }
 
+    @Test
+    public void ชื่อมีตัวอักษรมากกว่า20(){
+        NameValidation nameValidation = new NameValidation();
+        boolean result = nameValidation.isNameLong("ddddd");
+        assertFalse("ต้องไม่ผ่านนะ เพราะชื่อตัวอักษรมีมากกว่า20ตัว", result);
+    }
+    @Test
+    public void ชื่อมีตัวอักษรกว่ากว่า2(){
+        NameValidation nameValidation = new NameValidation();
+        boolean result = nameValidation.isNameShort("d");
+        assertFalse("ต้องไม่ผ่านนะ เพราะชื่อตัวอักษรมีมากกว่า20ตัว", result);
+    }
+
 
 }
