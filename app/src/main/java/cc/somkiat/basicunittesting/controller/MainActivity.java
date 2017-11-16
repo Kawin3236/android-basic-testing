@@ -41,8 +41,35 @@ public class MainActivity extends AppCompatActivity {
         inputEmail = findViewById(R.id.emailInput);
     }
 
-    public void checkInputname() {
+//    public void checkInputname() {
+//
+//        for (Validation validation : validationList) {
+//            validation.validation(inputName.getText().toString());
+//            if (!validation.getResult()) {
+//                Toast.makeText(this, validation.getErrorMessage(), Toast.LENGTH_SHORT).show();
+//                status = false;
+//                break;
+//            }
+//        }
+//
+//    }
 
+//    public void CheckEmail() {
+//
+//        for (Validation validation : emailValidationList) {
+//            validation.validation(inputEmail.getText().toString());
+//            if (!validation.getResult()) {
+//                Toast.makeText(this, validation.getErrorMessage(), Toast.LENGTH_SHORT).show();
+//                status = false;
+//                break;
+//            }
+//
+//        }
+//    }
+
+    public void onSaveClick(View view) {
+        // checkInputname();
+        //CheckEmail();
         for (Validation validation : validationList) {
             validation.validation(inputName.getText().toString());
             if (!validation.getResult()) {
@@ -51,11 +78,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
             }
         }
-
-    }
-
-    public void CheckEmail() {
-
         for (Validation validation : emailValidationList) {
             validation.validation(inputEmail.getText().toString());
             if (!validation.getResult()) {
@@ -65,12 +87,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
-    }
-
-    public void onSaveClick(View view) {
-        checkInputname();
-        CheckEmail();
-        if(status)
+        if (status)
             Toast.makeText(this, "Complete", Toast.LENGTH_SHORT).show();
     }
 
