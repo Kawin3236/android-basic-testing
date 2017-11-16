@@ -53,6 +53,20 @@ public class MainActivityTest {
         onView(withId(R.id.saveButton)).perform(scrollTo(), click());
         SystemClock.sleep(2000);
     }
+    @Test
+    public void saveUnsuccess2() {
+        onView(withId(R.id.userNameInput)).perform(replaceText("s"), closeSoftKeyboard());
+        onView(withId(R.id.emailInput)).perform(scrollTo(), replaceText("abd"), closeSoftKeyboard());
+        onView(withId(R.id.saveButton)).perform(scrollTo(), click());
+        SystemClock.sleep(2000);
+    }
+    @Test
+    public void saveUnsuccess3() {
+        onView(withId(R.id.userNameInput)).perform(replaceText("sssssssssssssssssssssssssssssssssssssssss"), closeSoftKeyboard());
+        onView(withId(R.id.emailInput)).perform(scrollTo(), replaceText("abd"), closeSoftKeyboard());
+        onView(withId(R.id.saveButton)).perform(scrollTo(), click());
+        SystemClock.sleep(2000);
+    }
 
     @Test
     public void revert() {
