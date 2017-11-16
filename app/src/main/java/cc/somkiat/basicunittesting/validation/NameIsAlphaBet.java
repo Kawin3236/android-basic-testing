@@ -1,4 +1,4 @@
-package cc.somkiat.basicunittesting.NameValidation;
+package cc.somkiat.basicunittesting.validation;
 
 import cc.somkiat.basicunittesting.Validation;
 
@@ -11,6 +11,7 @@ public class NameIsAlphaBet extends Validation {
     public void validation(String input) {
         if(!input.matches("^[a-zA-Z]*$")){
             setResult(false);
+            setErrorMessage("Name is not Alphabet.");
         }
     }
 }

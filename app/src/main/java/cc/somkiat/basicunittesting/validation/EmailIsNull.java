@@ -1,19 +1,17 @@
-package cc.somkiat.basicunittesting.NameValidation;
+package cc.somkiat.basicunittesting.validation;
 
 import cc.somkiat.basicunittesting.Validation;
-import cc.somkiat.basicunittesting.model.User;
 
 /**
  * Created by Kawin on 16/11/2560.
  */
 
-public class NameEmpty extends Validation {
-
-
+public class EmailIsNull extends Validation {
     @Override
     public void validation(String input) {
-        if (input.isEmpty()) {
+        if(input == null){
             setResult(false);
+            setErrorMessage("Email is null.");
         }
     }
 }

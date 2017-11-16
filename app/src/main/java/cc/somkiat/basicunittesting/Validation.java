@@ -19,7 +19,6 @@ public abstract class Validation {
         this.result = result;
     }
 
-
     public String getErrorMessage() {
         return errorMessage;
     }

@@ -1,4 +1,4 @@
-package cc.somkiat.basicunittesting.NameValidation;
+package cc.somkiat.basicunittesting.validation;
 
 import cc.somkiat.basicunittesting.Validation;
 
@@ -6,11 +6,12 @@ import cc.somkiat.basicunittesting.Validation;
  * Created by Kawin on 16/11/2560.
  */
 
-public class NameIsNumeric extends Validation {
+public class EmailIsEmpty extends Validation {
     @Override
     public void validation(String input) {
-        if(input.matches("^[0-9]+")){
+        if (input.isEmpty()) {
             setResult(false);
+            setErrorMessage("Email is empty.");
         }
     }
 }
